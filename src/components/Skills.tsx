@@ -44,8 +44,8 @@ const Skills: React.FC = () => {
                             key={index}
                             className="flex items-center p-4 gap-2 bg-gray-900 text-white rounded-lg shadow-md transition-colors duration-300 hover:bg-gray-700 active:bg-gray-600"
                         >
-                            <div className="text-4xl">{skill.icon}</div>
-                            <h3 className="text-xl font-semibold">{skill.name}</h3>
+                            <div className="md:text-4xl text-3xl">{skill.icon}</div>
+                            <h3 className="md:text-xl text-base font-semibold">{skill.name}</h3>
                         </div>
                     ))}
                 </div>

@@ -100,7 +100,7 @@ const Contact: React.FC = () => {
         <h2 className="text-3xl font-bold text-center mb-8 text-white">
           # Contact Me
         </h2>
-        <p className="mb-12 text-xl text-center text-gray-400">
+        <p className="mb-12 md:text-xl text-base text-center text-gray-400">
           Whether you have an innovative idea or need professional advice, I’m
           here to help. Let’s connect and create something remarkable together.
         </p>
