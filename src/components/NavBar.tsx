@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaDownload, FaUser, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
+import { FaUser, FaProjectDiagram, FaEnvelope, FaFilePdf } from 'react-icons/fa';
 import ThemeToggle from './ThemeToggle';
 
 export const NavBar: React.FC = () => {
@@ -41,8 +41,8 @@ export const NavBar: React.FC = () => {
                             <a href="#contact" className="ml-2">Contact</a>
                         </li>
                         {/* These items always stay in their original position */}
-                        <li className="flex justify-center items-center hover:text-gray-400 bg-gray-900 text-white p-2 px-4 rounded-md">
-                            <FaDownload className="md:text-base text-sm" />
+                        <li className="flex justify-center items-center hover:text-gray-400 bg-gray-900 text-white md:p-2 p-1 md:px-4 px-2.5 rounded-md">
+                            <FaFilePdf className="md:text-base text-sm" />
                             <a href="#resume" className="ml-2">RESUME</a>
                         </li>
                         <li>
@@ -52,7 +52,7 @@ export const NavBar: React.FC = () => {
                 </motion.nav>
             </div>
             {/* Bottom NavBar for smaller screens */}
-            <nav className="fixed bottom-4 left-1/2 transform -translate-x-1/2 w-full max-w-md bg-transparent backdrop-blur-md dark:border-2 dark:border-gray-900 dark:text-white text-gray-900 flex justify-around items-center py-3 md:hidden rounded-lg">
+            <nav className="fixed bottom-1 left-1/2 transform -translate-x-1/2 w-[90%] backdrop-blur-md bg-gray-900 dark:border-2 dark:border-gray-700 border-gray-100 dark:text-white text-gray-900 flex justify-around items-center py-3 md:hidden rounded-lg z-50">
                 <a href="#about" className="flex flex-col items-center text-gray-400 hover:text-white">
                     <FaUser className="text-xl" />
                     <span className="text-sm">About</span>

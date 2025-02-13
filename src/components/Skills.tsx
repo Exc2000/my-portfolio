@@ -30,7 +30,7 @@ const Skills: React.FC = () => {
     const isInView = useInView(ref, { once: true });
 
     return (
-        <div className="min-h-screen container mx-auto p-6 lg:px-20">
+        <div className="h-full my-16 container mx-auto p-6 lg:px-20">
             <h2 className="text-3xl font-bold md:text-center mb-8 dark:text-white text-gray-900"># My Skills</h2>
             <motion.div
                 ref={ref}
@@ -45,7 +45,7 @@ const Skills: React.FC = () => {
                             className="flex items-center p-4 gap-2 bg-gray-900 text-white rounded-lg shadow-md transition-colors duration-300 hover:bg-gray-700 active:bg-gray-600"
                         >
                             <div className="md:text-4xl text-3xl">{skill.icon}</div>
-                            <h3 className="md:text-xl text-base font-semibold">{skill.name}</h3>
+                            <h3 className="md:text-xl text-sm font-semibold">{skill.name}</h3>
                         </div>
                     ))}
                 </div>
