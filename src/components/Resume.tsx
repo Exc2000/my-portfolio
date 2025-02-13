@@ -9,7 +9,7 @@ const Resume: React.FC = () => {
     const isExperienceInView = useInView(experienceRef, { once: true });
 
     return (
-        <div className="min-h-screen container mx-auto lg:px-20 p-6">
+        <div className="h-screen container mx-auto lg:px-20 p-6">
             <h1 className="text-3xl font-bold md:text-center my-8 dark:text-white text-gray-900"># Resume</h1>
             <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Education Section */}

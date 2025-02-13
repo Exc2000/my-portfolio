@@ -11,7 +11,7 @@ const About: React.FC = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="min-h-screen flex flex-col justify-center items-center max-w-4xl md:mx-auto p-6 my-10 mx-4 md:text-center"
+            className="h-full my-16 flex flex-col justify-center items-center max-w-3xl md:mx-auto p-6 mx-4 md:text-center"
             id="about"
         >
             <h2 className="text-3xl font-bold mb-4 md:text-center dark:text-white text-gray-900"># About Me</h2>

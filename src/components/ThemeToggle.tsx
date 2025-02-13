@@ -3,18 +3,13 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 
 const ThemeToggle: React.FC = () => {
     const [darkMode, setDarkMode] = useState(() => {
-        // Check localStorage for theme preference
-        return localStorage.getItem('theme') === 'dark';
-    });
-
-    useEffect(() => {
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
+        if (typeof window !== "undefined") {
+            return localStorage.getItem('theme') === 'dark' ||
+                (!localStorage.getItem('theme') &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches);
         }
-    }, []); // Run only once on mount
+        return false;
+    });
 
     useEffect(() => {
         if (darkMode) {
@@ -29,9 +24,9 @@ const ThemeToggle: React.FC = () => {
     return (
         <button
             onClick={() => setDarkMode(!darkMode)}
-            className="p-2 rounded-full focus:outline-none hover:bg-gray-200 dark:hover:bg-gray-700"
+            className="p-2 rounded-full focus:outline-none hover:bg-gray-200 dark:hover:bg-gray-200 transition-all duration-300"
         >
-            {darkMode ? <FaSun className="text-yellow-500" /> : <FaMoon className="text-gray-900" />}
+            {darkMode ? <FaMoon className="text-gray-900" /> : <FaSun className="text-yellow-500" />}
         </button>
     );
 };
