@@ -8,7 +8,7 @@ function Content () {
       <NavBar />
       <div className="min-h-screen max-w-3xl mx-auto md:mt-[75px] mt-20">
         <Outlet />
-        <SplashCursor />
+        {/* <SplashCursor /> */}
       </div>
     </div>
   );
