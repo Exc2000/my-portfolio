@@ -18,48 +18,48 @@ interface ProjectProps {
 const Project: React.FC<ProjectProps> = ({ title, description, technology, githubLink, liveLink }) => {
     return (
         <motion.div
-            className="bg-gray-200 dark:bg-gray-900 text-gray-900 dark:text-gray-50 shadow-lg rounded-md p-6 border border-gray-700 transition-transform hover:scale-105 hover:shadow-xl"
+            className="bg-gray-600 bg-opacity-10 shadow-lg rounded-md p-6 transition-transform"
             variants={{
-                hidden: { opacity: 0, y: 50 },
-                visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, y: 50 },
+            visible: { opacity: 1, y: 0 },
             }}
             whileInView="visible"
             initial="hidden"
             viewport={{ once: true, amount: 0.2 }} // Trigger animation once when 20% of the element is visible
             transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-            <h2 className="text-3xl font-semibold mb-3">{title}</h2>
-            <p className="text-gray-900 dark:text-gray-200 mb-2 leading-relaxed">{description}</p>
+            <h2 className="text-2xl font-semibold mb-3 text-white/80">{title}</h2>
+            <p className="text-gray-500 mb-2 leading-relaxed">{description}</p>
             <div className="flex flex-wrap items-center mb-3 gap-2">
-                {technology.map((tech, index) => (
-                    <div
-                        key={index}
-                        className="flex items-center space-x-2 bg-gray-300 dark:bg-gray-600 text-gray-800 dark:text-gray-300 rounded-full px-3 py-1 mt-2"
-                    >
-                        {tech.icon}
-                        <span className="text-sm font-semibold">{tech.name}</span>
-                    </div>
-                ))}
+            {technology.map((tech, index) => (
+                <div
+                key={index}
+                className="flex items-center space-x-2 bg-gray-600/65 text-gray-200 rounded-full px-3 py-1 mt-2"
+                >
+                {tech.icon}
+                <span className="text-sm font-semibold">{tech.name}</span>
+                </div>
+            ))}
             </div>
-            <div className="flex space-x-3 mt-4">
-                <a
-                    href={githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center px-4 py-1.5 text-white bg-gray-800 dark:bg-gray-950 rounded-md shadow-md hover:bg-gray-700 transition-all"
-                >
-                    <FaGithub className="mr-2 text-base" />
-                    CODE
-                </a>
-                <a
-                    href={liveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center px-4 py-1.5 text-white bg-gray-800 dark:bg-gray-950 rounded-md shadow-md hover:bg-gray-700 transition-all"
-                >
-                    <FaExternalLinkAlt className="mr-2 text-base" />
-                    LIVE
-                </a>
+            <div className="flex space-x-3 mt-4 float-end">
+            <a
+                href={githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center px-3 py-1 text-white bg-black font-bold text-sm rounded-md  transition-all"
+            >
+                <FaGithub className="mr-2" />
+                CODE
+            </a>
+            <a
+                href={liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center px-3 py-1 text-white bg-black font-bold text-sm rounded-md transition-all"
+            >
+                <FaExternalLinkAlt className="mr-2" />
+                LIVE
+            </a>
             </div>
         </motion.div>
     );
@@ -67,10 +67,10 @@ const Project: React.FC<ProjectProps> = ({ title, description, technology, githu
 
 const ProjectList: React.FC<{ projects: ProjectProps[] }> = ({ projects }) => {
     return (
-        <div className="container mx-auto p-6 lg:px-20" id="projects">
-            <h1 className="text-3xl font-bold md:text-center mb-8 dark:text-white text-gray-900"># My Projects</h1>
+        <div className="mt-10" id="projects">
+            <h1 className="text-2xl font-bold mb-8 text-white"># My Projects</h1>
             <motion.div
-                className="grid grid-cols-1 md:grid-cols-2 gap-4"
+                className="grid grid-cols-1 gap-4"
                 initial="hidden"
                 animate="visible"
                 variants={{
