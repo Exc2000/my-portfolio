@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { NavBar } from "./NavBar";
-import SplashCursor from "../components/code";
+// import SplashCursor from "../components/code";
 
 function Content () {
   return (
