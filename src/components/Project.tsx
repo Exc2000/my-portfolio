@@ -18,7 +18,7 @@ interface ProjectProps {
 const Project: React.FC<ProjectProps> = ({ title, description, technology, githubLink, liveLink }) => {
     return (
         <motion.div
-            className="bg-gray-600 bg-opacity-10 shadow-lg rounded-md p-6 transition-transform"
+            className="bg-[#1f1f1f] bg-opacity-60 shadow-lg rounded-md p-6"
             variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
@@ -46,7 +46,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, technology, githu
                 href={githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center px-3 py-1 text-white bg-black font-bold text-sm rounded-md  transition-all"
+                className="flex items-center px-3 py-1 text-gray-200 bg-black font-bold text-sm rounded-md  transition-all"
             >
                 <FaGithub className="mr-2" />
                 CODE
@@ -55,7 +55,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, technology, githu
                 href={liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center px-3 py-1 text-white bg-black font-bold text-sm rounded-md transition-all"
+                className="flex items-center px-3 py-1 text-gray-200 bg-black font-bold text-sm rounded-md transition-all"
             >
                 <FaExternalLinkAlt className="mr-2" />
                 LIVE
@@ -68,7 +68,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, technology, githu
 const ProjectList: React.FC<{ projects: ProjectProps[] }> = ({ projects }) => {
     return (
         <div className="mt-10" id="projects">
-            <h1 className="text-2xl font-bold mb-8 text-white"># My Projects</h1>
+            <h1 className="text-2xl font-bold mb-6 text-white"># My Projects</h1>
             <motion.div
                 className="grid grid-cols-1 gap-4"
                 initial="hidden"

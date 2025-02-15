@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaUser, FaProjectDiagram, FaEnvelope, FaFilePdf } from 'react-icons/fa';
+import { FaUser, FaProjectDiagram, FaFilePdf, FaHome, FaCode } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 
 export const NavBar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,7 +18,7 @@ export const NavBar: React.FC = () => {
   return (
     <motion.nav
       className={`fixed top-4 left-4 right-4 md:left-0 md:right-0 max-w-3xl mx-auto p-3 rounded-xl z-10 transition-all duration-500 ${
-        isScrolled ? 'backdrop-blur-md bg-gray-600 bg-opacity-30' : 'bg-gray-600 bg-opacity-10'
+        isScrolled ? 'backdrop-blur-md bg-[#1f1f1f] bg-opacity-60' : 'bg-[#1f1f1f] bg-opacity-60'
       }`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -26,19 +27,58 @@ export const NavBar: React.FC = () => {
       <div className="flex justify-between items-center">
         {/* Navigation Links */}
         <motion.ul
-          className="flex items-center space-x-1 text-white text-xl font-semibold uppercase"
+          className="flex items-center space-x-3 text-white text-lg font-semibold"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: 'easeOut' }}
         >
-          <li className="flex items-center p-2 bg-black hover:bg-gray-200 hover:text-gray-500 transition-all duration-700 rounded-full">
-            <FaUser className="text-lg" />
+          <li>
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `flex items-center p-2 rounded-full transition-all duration-500 ${
+                  isActive ? 'bg-gray-700 text-white' : 'bg-black hover:bg-gray-200 hover:text-gray-800'
+                }`
+              }
+            >
+              <FaHome className="text-lg" />
+            </NavLink>
           </li>
-          <li className="flex items-center p-2 bg-black hover:bg-gray-200 hover:text-gray-500 transition-all duration-700 rounded-full">
-            <FaProjectDiagram className="text-lg" />
+          <li>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `flex items-center p-2 rounded-full transition-all duration-500 ${
+                  isActive ? 'bg-gray-700 text-white' : 'bg-black hover:bg-gray-200 hover:text-gray-800'
+                }`
+              }
+            >
+              <FaUser className="text-lg" />
+            </NavLink>
           </li>
-          <li className="flex items-center p-2 bg-black hover:bg-gray-200 hover:text-gray-500 transition-all duration-700 rounded-full">
-            <FaEnvelope className="text-lg" />
+          <li>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                `flex items-center p-2 rounded-full transition-all duration-500 ${
+                  isActive ? 'bg-gray-700 text-white' : 'bg-black hover:bg-gray-200 hover:text-gray-800'
+                }`
+              }
+            >
+              <FaProjectDiagram className="text-lg" />
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/skills"
+              className={({ isActive }) =>
+                `flex items-center p-2 rounded-full transition-all duration-500 ${
+                  isActive ? 'bg-gray-700 text-white' : 'bg-black hover:bg-gray-200 hover:text-gray-800'
+                }`
+              }
+            >
+              <FaCode className="text-lg" />
+            </NavLink>
           </li>
         </motion.ul>
 
