@@ -31,25 +31,23 @@ const Skills: React.FC = () => {
 
     return (
         <div className="h-full my-16 container mx-auto p-6 lg:px-20">
-            <h2 className="text-3xl font-bold md:text-center mb-8 dark:text-white text-gray-900"># My Skills</h2>
-            <motion.div
-                ref={ref}
-                initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
-            >
-                <div className="grid grid-cols-2 gap-4">
+            <h2 className="text-2xl font-bold md:text-center mb-8 text-white"># My Skills</h2>
+         
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     {skills.map((skill, index) => (
-                        <div
+                        <motion.div
                             key={index}
-                            className="flex items-center p-4 gap-2 bg-gray-900 text-white rounded-lg shadow-md transition-colors duration-300 hover:bg-gray-700 active:bg-gray-600"
+                            className="flex items-center p-4 gap-2 bg-[#1f1f1f] bg-opacity-20 text-white rounded-lg shadow-md transition-colors duration-300 hover:bg-[#383838]"
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
                             <div className="md:text-4xl text-3xl">{skill.icon}</div>
                             <h3 className="md:text-xl text-sm font-semibold">{skill.name}</h3>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
-            </motion.div>
+            
         </div>
     );
 };
