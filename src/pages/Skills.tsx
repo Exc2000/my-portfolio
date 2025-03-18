@@ -17,26 +17,17 @@ import {
   SiTypescript,
   SiExpress,
   SiMongodb,
-  SiPostgresql,
   SiFirebase,
-  SiGraphql,
   SiRedux,
   SiTailwindcss,
   SiBootstrap,
-  SiPrisma,
-  SiJest,
-  SiCypress,
   SiVite,
   SiWebpack,
-  SiBabel,
   SiGitlab,
   SiGooglecloud,
   SiVercel,
   SiNetlify,
-  SiDigitalocean,
   SiHeroku,
-  SiKubernetes,
-  SiTerraform,
   SiFastapi,
   SiAmazon,
 } from "react-icons/si";
@@ -46,11 +37,8 @@ const skills = [
   { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
   { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
   { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
-  { name: "GraphQL", icon: <SiGraphql className="text-pink-500" /> },
   { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-  { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-600" /> },
   { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
-  { name: "Prisma", icon: <SiPrisma className="text-gray-300" /> },
   { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
   { name: "JavaScript", icon: <FaJsSquare className="text-yellow-300" /> },
   { name: "Python", icon: <FaPython className="text-green-700" /> },
@@ -62,20 +50,14 @@ const skills = [
   { name: "Redux", icon: <SiRedux className="text-purple-400" /> },
   { name: "Vite", icon: <SiVite className="text-purple-500" /> },
   { name: "Webpack", icon: <SiWebpack className="text-blue-500" /> },
-  { name: "Babel", icon: <SiBabel className="text-yellow-500" /> },
-  { name: "Jest", icon: <SiJest className="text-red-500" /> },
-  { name: "Cypress", icon: <SiCypress className="text-green-500" /> },
   { name: "Git", icon: <FaGit className="text-red-500" /> },
   { name: "GitHub Actions", icon: <SiGitlab className="text-gray-300" /> },
   { name: "Docker", icon: <FaDocker className="text-blue-600" /> },
-  { name: "Kubernetes", icon: <SiKubernetes className="text-blue-500" /> },
-  { name: "Terraform", icon: <SiTerraform className="text-purple-400" /> },
   { name: "AWS", icon: <SiAmazon className="text-yellow-500" /> },
   { name: "Google Cloud", icon: <SiGooglecloud className="text-blue-500" /> },
   { name: "Vercel", icon: <SiVercel className="text-white" /> },
   { name: "Netlify", icon: <SiNetlify className="text-teal-400" /> },
   { name: "Heroku", icon: <SiHeroku className="text-purple-500" /> },
-  { name: "Digital Ocean", icon: <SiDigitalocean className="text-blue-600" /> },
   { name: "CI/CD", icon: <FaCloud className="text-gray-300" /> },
   { name: "NPM", icon: <FaNpm className="text-red-500" /> },
 ];
@@ -103,7 +85,7 @@ const Skills: React.FC = () => {
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="flex items-center p-3 gap-3 bg-[#1f1f1f] text-white rounded-lg shadow-md transition-all duration-300 hover:bg-[#383838] active:bg-gray-600"
+              className="flex items-center p-3 gap-3 bg-[#0000005e] text-white rounded-lg shadow-md transition-all duration-300 hover:bg-[#383838] active:bg-gray-600"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
