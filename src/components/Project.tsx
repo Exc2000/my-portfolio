@@ -18,7 +18,7 @@ interface ProjectProps {
 const Project: React.FC<ProjectProps> = ({ title, description, technology, githubLink, liveLink }) => {
     return (
         <motion.div
-            className="bg-[#1f1f1f] bg-opacity-60 shadow-lg rounded-md p-6"
+            className="bg-[#0000005e] shadow-lg rounded-md p-6"
             variants={{
             hidden: { opacity: 0, y: 50 },
             visible: { opacity: 1, y: 0 },
@@ -29,7 +29,7 @@ const Project: React.FC<ProjectProps> = ({ title, description, technology, githu
             transition={{ duration: 0.6, ease: 'easeOut' }}
         >
             <h2 className="text-2xl font-semibold mb-3 text-white/80">{title}</h2>
-            <p className="text-gray-500 mb-2 leading-relaxed">{description}</p>
+            <p className="text-gray-400 mb-2 leading-relaxed">{description}</p>
             <div className="flex flex-wrap items-center mb-3 gap-2">
             {technology.map((tech, index) => (
                 <div

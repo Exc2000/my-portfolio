@@ -27,7 +27,7 @@ export const NavBar: React.FC = () => {
       <div className="flex justify-between items-center">
         {/* Navigation Links */}
         <motion.ul
-          className="flex items-center space-x-3 text-white text-lg font-semibold"
+          className="flex items-center space-x-2 text-white text-lg font-semibold"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: 'easeOut' }}
@@ -37,7 +37,7 @@ export const NavBar: React.FC = () => {
               to="/"
               className={({ isActive }) =>
                 `flex items-center p-2 rounded-full transition-all duration-500 ${
-                  isActive ? 'bg-gray-700 text-white' : 'bg-black hover:bg-gray-200 hover:text-gray-800'
+                  isActive ? 'bg-gray-200 text-black' : 'bg-black hover:bg-gray-200 hover:text-gray-800'
                 }`
               }
             >
@@ -49,7 +49,7 @@ export const NavBar: React.FC = () => {
               to="/about"
               className={({ isActive }) =>
                 `flex items-center p-2 rounded-full transition-all duration-500 ${
-                  isActive ? 'bg-gray-700 text-white' : 'bg-black hover:bg-gray-200 hover:text-gray-800'
+                  isActive ? 'bg-gray-200 text-black' : 'bg-black hover:bg-gray-200 hover:text-gray-800'
                 }`
               }
             >
@@ -61,7 +61,7 @@ export const NavBar: React.FC = () => {
               to="/projects"
               className={({ isActive }) =>
                 `flex items-center p-2 rounded-full transition-all duration-500 ${
-                  isActive ? 'bg-gray-700 text-white' : 'bg-black hover:bg-gray-200 hover:text-gray-800'
+                  isActive ? 'bg-gray-200 text-black' : 'bg-black hover:bg-gray-200 hover:text-gray-800'
                 }`
               }
             >
@@ -73,7 +73,7 @@ export const NavBar: React.FC = () => {
               to="/skills"
               className={({ isActive }) =>
                 `flex items-center p-2 rounded-full transition-all duration-500 ${
-                  isActive ? 'bg-gray-700 text-white' : 'bg-black hover:bg-gray-200 hover:text-gray-800'
+                  isActive ? 'bg-gray-200 text-black' : 'bg-black hover:bg-gray-200 hover:text-gray-800'
                 }`
               }
             >
