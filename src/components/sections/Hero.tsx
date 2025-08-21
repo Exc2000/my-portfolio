@@ -6,8 +6,8 @@ export const Hero = () => {
     <section id="home" className="relative flex flex-col items-center justify-center text-center max-w-5xl mx-auto px-6 pt-46 pb-24 overflow-hidden">
       {/* Background Geometric Shapes */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-10 left-1/4 w-44 h-44 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-1/4 w-60 h-60 bg-muted/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-10 left-1/4 w-44 h-44 bg-accent/10 rounded-full  animate-pulse" />
+        <div className="absolute bottom-20 right-1/4 w-60 h-60 bg-accent/10 rounded-full  animate-pulse" />
         <div className="absolute top-1/2 left-1/2 w-28 h-28 bg-accent/10 rotate-45 transform -translate-x-1/2 -translate-y-1/2 animate-bounce" />
       </div>
 
@@ -26,13 +26,13 @@ export const Hero = () => {
           to="/"
           className="px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium shadow-md hover:shadow-lg transition-transform hover:-translate-y-0.5"
         >
-          View Projects
+          Projects
         </Link>
         <Link
           to="/"
           className="px-6 py-3 rounded-xl border font-medium hover:bg-accent transition shadow-sm hover:shadow-md"
         >
-          Download Resume
+          Resume
         </Link>
       </div>
 
@@ -55,7 +55,7 @@ export const Hero = () => {
           <Linkedin className="h-6 w-6" />
         </a>
         <a
-          href="https://twitter.com/AliBabagnaMusa"
+          href="https://x.com/AliBabagnaMusa"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-foreground transition-colors"

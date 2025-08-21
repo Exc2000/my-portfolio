@@ -11,7 +11,7 @@ export const AboutMe = () => {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         {/* Profile Image */}
         <div className="flex justify-center">
-          <div className="relative w-[400px] h-[400px] rounded-2xl overflow-hidden shadow-xl">
+          <div className="relative max-w-[400px] max-h-[400px] rounded-2xl overflow-hidden shadow-xl">
             <img
               src={MyPic}
               alt="Ali Musa"

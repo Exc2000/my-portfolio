@@ -51,7 +51,7 @@ export const Projects = () => {
             key={project.title}
             className="rounded-2xl border bg-card shadow-md hover:shadow-xl overflow-hidden"
           >
-            <div className="px-6 pt-6">
+            <div className="md:px-6 px-4 md:pt-6 pt-4">
               <img
                 src={image}
                 alt={project.title}
@@ -59,7 +59,7 @@ export const Projects = () => {
               />
             </div>
 
-            <div className="p-6 flex flex-col justify-between">
+            <div className="md:p-6 p-4 flex flex-col justify-between">
               <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
               <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                 {project.description}
