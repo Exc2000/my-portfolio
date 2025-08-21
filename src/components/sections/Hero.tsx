@@ -1,9 +1,19 @@
 import { Link } from "react-router-dom";
-import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+  Briefcase,
+  FileArchive,
+} from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section id="home" className="relative flex flex-col items-center justify-center text-center max-w-5xl mx-auto px-6 pt-46 pb-24 overflow-hidden">
+    <section
+      id="home"
+      className="relative flex flex-col items-center justify-center text-center max-w-5xl mx-auto px-6 pt-46 pb-24 overflow-hidden"
+    >
       {/* Background Geometric Shapes */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-10 left-1/4 w-44 h-44 bg-accent/10 rounded-full  animate-pulse" />
@@ -11,9 +21,9 @@ export const Hero = () => {
         <div className="absolute top-1/2 left-1/2 w-28 h-28 bg-accent/10 rotate-45 transform -translate-x-1/2 -translate-y-1/2 animate-bounce" />
       </div>
 
-      {/* Hero Content */}
-      <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 drop-shadow-sm">
-        Hi, I’m <span className="text-primary">Ali Babagana Musa</span>
+      <h1 className="flex md:flex-row flex-col text-4xl md:text-6xl font-extrabold tracking-tight mb-6 drop-shadow-sm">
+        <span>Hi, I’m&nbsp;</span>
+        <span className="text-primary">Ali Babagana Musa</span>
       </h1>
 
       <p className="text-muted-foreground text-lg md:text-xl mb-10 max-w-2xl">
@@ -24,15 +34,15 @@ export const Hero = () => {
       <div className="flex gap-5 mb-8">
         <Link
           to="/"
-          className="px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium shadow-md hover:shadow-lg transition-transform hover:-translate-y-0.5"
+          className="flex justify-center items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium shadow-md hover:shadow-lg transition-transform hover:-translate-y-0.5"
         >
-          Projects
+          <Briefcase className="w-5 h-5" /> Projects
         </Link>
         <Link
           to="/"
-          className="px-6 py-3 rounded-xl border font-medium hover:bg-accent transition shadow-sm hover:shadow-md"
+          className="flex justify-center items-center gap-2 px-6 py-3 rounded-xl border font-medium hover:bg-accent transition shadow-sm hover:shadow-md"
         >
-          Resume
+          <FileArchive className="w-5 h-5" /> Résumé
         </Link>
       </div>
 
