@@ -5,9 +5,9 @@ export const GetInTouch = () => {
     <section className="relative py-24 px-6 max-w-4xl mx-auto text-center overflow-hidden">
       {/* Background Geometric Shapes */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-1/4 w-48 h-48 bg-primary/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-10 right-1/3 w-64 h-64 bg-muted/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-accent/10 rotate-45 transform -translate-x-1/2 -translate-y-1/2 animate-bounce" />
+        <div className="absolute top-10 left-1/4 w-44 h-44 bg-accent/10 rounded-full  animate-pulse" />
+        <div className="absolute bottom-20 right-1/4 w-60 h-60 bg-accent/10 rounded-full  animate-pulse" />
+        <div className="absolute top-1/2 left-1/2 w-28 h-28 bg-accent/10 rotate-45 transform -translate-x-1/2 -translate-y-1/2 animate-bounce" />
       </div>
 
       {/* Section Content */}
@@ -48,7 +48,7 @@ export const GetInTouch = () => {
           <Linkedin className="h-6 w-6" />
         </a>
         <a
-          href="https://twitter.com/AliBabaganaMusa"
+          href="https://x.com/AliBabaganaMusa"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-foreground transition-colors"
