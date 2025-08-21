@@ -6,10 +6,10 @@ import { ModeToggle } from "../mode-toggle";
 import { Button } from "../ui/button";
 
 const navItems = [
-  { label: "Home", link: "/", icon: Home },
-  { label: "Projects", link: "/projects", icon: Briefcase },
-  { label: "Resume", link: "/resume", icon: FileText },
-  { label: "About", link: "/about", icon: User },
+  { label: "Home", link: "/#home", icon: Home },
+  { label: "Projects", link: "/#projects", icon: Briefcase },
+  { label: "Resume", link: "/#resume", icon: FileText },
+  { label: "About", link: "/#about", icon: User },
 ];
 
 const TopNav = () => {
@@ -32,16 +32,16 @@ const TopNav = () => {
             const isActive = pathname === item.link;
 
             return (
-              <Link
+              <a
                 key={item.label}
-                to={item.link}
+                href={item.link}
                 className={cn(
                   "flex items-center gap-1.5 text-sm transition-colors",
                   isActive ? "text-primary font-medium" : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 <Icon className="h-4 w-4" /> {item.label}
-              </Link>
+              </a>
             );
           })}
 
@@ -70,9 +70,9 @@ const TopNav = () => {
               const isActive = pathname === item.link;
 
               return (
-                <Link
+                <a
                   key={item.label}
-                  to={item.link}
+                  href={item.link}
                   onClick={() => setMenuOpen(false)}
                   className={cn(
                     "flex items-center gap-2 text-sm transition-colors",
@@ -80,7 +80,7 @@ const TopNav = () => {
                   )}
                 >
                   <Icon className="h-4 w-4" /> {item.label}
-                </Link>
+                </a>
               );
             })}
           </div>

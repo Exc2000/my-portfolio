@@ -3,7 +3,7 @@ import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center text-center max-w-5xl mx-auto px-6 pt-36 pb-28 overflow-hidden">
+    <section id="home" className="relative flex flex-col items-center justify-center text-center max-w-5xl mx-auto px-6 pt-46 pb-24 overflow-hidden">
       {/* Background Geometric Shapes */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-10 left-1/4 w-44 h-44 bg-primary/10 rounded-full blur-3xl animate-pulse" />
@@ -16,27 +16,20 @@ export const Hero = () => {
         Hi, I’m <span className="text-primary">Ali Babagana Musa</span>
       </h1>
 
-      <p className="text-muted-foreground text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
-        A passionate{" "}
-        <span className="font-medium text-foreground">Software Engineer</span>{" "}
-        crafting sleek, performant, and delightful digital experiences with
-        modern technologies. I specialize in building{" "}
-        <span className="font-medium">scalable web applications</span>, intuitive{" "}
-        <span className="font-medium">user interfaces</span>, and exploring{" "}
-        <span className="font-medium">cutting-edge tools</span> that push the
-        boundaries of what’s possible on the web. My mission is to turn complex
-        problems into elegant, human-friendly solutions.
+      <p className="text-muted-foreground text-lg md:text-xl mb-10 max-w-2xl">
+        Software Engineer passionate about crafting sleek, scalable, and
+        intuitive digital experiences.
       </p>
 
       <div className="flex gap-5 mb-8">
         <Link
-          to="/projects"
+          to="/"
           className="px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium shadow-md hover:shadow-lg transition-transform hover:-translate-y-0.5"
         >
           View Projects
         </Link>
         <Link
-          to="/resume"
+          to="/"
           className="px-6 py-3 rounded-xl border font-medium hover:bg-accent transition shadow-sm hover:shadow-md"
         >
           Download Resume
@@ -46,7 +39,7 @@ export const Hero = () => {
       {/* Social Links */}
       <div className="flex gap-6">
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/exc2000"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-foreground transition-colors"
@@ -54,7 +47,7 @@ export const Hero = () => {
           <Github className="h-6 w-6" />
         </a>
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://www.linkedin.com/in/ali-babagana-musa-3aa605243?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-foreground transition-colors"
@@ -62,7 +55,7 @@ export const Hero = () => {
           <Linkedin className="h-6 w-6" />
         </a>
         <a
-          href="https://twitter.com/yourusername"
+          href="https://twitter.com/AliBabagnaMusa"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-foreground transition-colors"
@@ -70,7 +63,7 @@ export const Hero = () => {
           <Twitter className="h-6 w-6" />
         </a>
         <a
-          href="https://instagram.com/yourusername"
+          href="https://instagram.com/dev.alibabaganamusa"
           target="_blank"
           rel="noopener noreferrer"
           className="text-muted-foreground hover:text-foreground transition-colors"

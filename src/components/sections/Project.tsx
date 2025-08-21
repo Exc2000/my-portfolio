@@ -39,7 +39,7 @@ const projects = [
 
 export const Projects = () => {
   return (
-    <section className="relative max-w-5xl mx-auto px-6 py-28">
+    <section id="projects" className="relative max-w-5xl mx-auto px-6 py-28">
       <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center mb-14 drop-shadow-sm">
         Featured <span className="text-primary">Projects</span>
       </h2>
