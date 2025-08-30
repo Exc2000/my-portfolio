@@ -31,7 +31,7 @@ export const Hero = () => {
         intuitive digital experiences.
       </p>
 
-      <div className="flex gap-5 mb-8">
+      <div className="flex gap-4 mb-8">
         <Link
           to="/"
           className="flex justify-center items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium shadow-md hover:shadow-lg transition-transform hover:-translate-y-0.5"

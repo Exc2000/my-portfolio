@@ -1,39 +1,38 @@
 import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
-import image from "../../assets/image.jpg";
+import Pic1 from "../../assets/pic (1).png";
+import Pic2 from "../../assets/pic (2).png";
+import Pic3 from "../../assets/pic (3).png";
+import Pic4 from "../../assets/pic (4).png";
 
 const projects = [
   {
-    title: "Portfolio Website",
+    title: "Loan Management System",
     description:
-      "A modern portfolio built with React, Tailwind, and shadcn/ui. Includes smooth animations, dark/light mode, and responsive design.",
-    link: "https://github.com/username/portfolio",
-    image:
-      "https://unsplash.com/photos/man-sitting-on-rock-surrounded-by-water--Q_t4SCN8c4",
+      "A web-based system for managing loan applications, approvals, and repayments. Features include multi-role access (admin, staff, client), automated interest calculations, payment tracking, and a responsive dashboard built with React, Tailwind, and AntD.",
+    link: "https://github.com/exc2000/Sleepwell-Frontend",
+    image: Pic1,
+  },
+  {
+    title: "VTU Reselling Platform",
+    description:
+      "An online platform for reselling airtime, data, and utility bills. It supports secure wallet funding, transaction history, and user role management. Built with React, Tailwind, and shadcn/ui, with a focus on responsive UI and smooth user experience.",
+    link: "https://github.com/exc2000/SmartByteSub-Frontend",
+    image: Pic2,
   },
   {
     title: "Portfolio Website",
     description:
-      "A modern portfolio built with React, Tailwind, and shadcn/ui. Includes smooth animations, dark/light mode, and responsive design.",
-    link: "https://github.com/username/portfolio",
-    image:
-      "https://unsplash.com/photos/man-sitting-on-rock-surrounded-by-water--Q_t4SCN8c4",
+      "A personal developer portfolio showcasing projects, skills, and contact information. Built with React, Tailwind, and shadcn/ui, it features theme switching (dark/light), smooth animations, and a mobile-friendly design.",
+    link: "https://github.com/exc2000/my-portfolio",
+    image: Pic3,
   },
   {
-    title: "Portfolio Website",
+    title: "Payroll Management System",
     description:
-      "A modern portfolio built with React, Tailwind, and shadcn/ui. Includes smooth animations, dark/light mode, and responsive design.",
-    link: "https://github.com/username/portfolio",
-    image:
-      "https://unsplash.com/photos/man-sitting-on-rock-surrounded-by-water--Q_t4SCN8c4",
-  },
-  {
-    title: "Portfolio Website",
-    description:
-      "A modern portfolio built with React, Tailwind, and shadcn/ui. Includes smooth animations, dark/light mode, and responsive design.",
-    link: "https://github.com/username/portfolio",
-    image:
-      "https://unsplash.com/photos/man-sitting-on-rock-surrounded-by-water--Q_t4SCN8c4",
+      "A system for automating salary calculations, employee records, and payment reports. Includes role-based access, tax/deduction handling, and real-time payroll summaries. Developed with React, Tailwind, and shadcn/ui for a clean and efficient workflow.",
+    link: "https://github.com/exc2000/nalv-payroll-system-frontend",
+    image: Pic4,
   },
 ];
 
@@ -53,7 +52,7 @@ export const Projects = () => {
           >
             <div className="md:px-6 px-4 md:pt-6 pt-4">
               <img
-                src={image}
+                src={project.image}
                 alt={project.title}
                 className="w-full h-50 object-cover rounded-2xl border"
               />
